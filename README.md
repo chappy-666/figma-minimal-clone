@@ -66,5 +66,5 @@ npm run dev
 
 ## 📬 Contact
 
-If you have any questions or suggestions, feel free to reach out via [GitHub Issues](https://github.com/chappy-666/figma-minimal-clone/issues) or [@your-twitter_handle](https://x.com/chappy_job).
+If you have any questions or suggestions, feel free to reach out via [GitHub Issues](https://github.com/chappy-666/figma-minimal-clone/issues) or [@chappy_job](https://x.com/chappy_job).
 

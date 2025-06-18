@@ -64,6 +64,13 @@ npm run dev
 
 ---
 
+## 🔗 Live Demo
+
+You can view the deployed project here:
+🌐 [https://figma-minimal-clone.vercel.app/](https://figma-minimal-clone.vercel.app/)
+
+---
+
 ## 📬 Contact
 
 If you have any questions or suggestions, feel free to reach out via [GitHub Issues](https://github.com/chappy-666/figma-minimal-clone/issues) or [@chappy_job](https://x.com/chappy_job).

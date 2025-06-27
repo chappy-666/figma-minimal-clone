@@ -1,18 +1,19 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  ArrowRight, 
-  Users, 
-  Building2, 
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import {
+  Menu,
+  X,
+  ArrowRight,
+  Users,
+  Building2,
   UserCheck,
   Monitor,
   Code,
   Settings,
-  ChevronLeft,
-  ChevronRight
-} from 'lucide-react';
+  CalendarDays,
+  CreditCard,
+} from "lucide-react";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,27 +24,30 @@ export default function Home() {
     {
       title: "Lessons and insights",
       subtitle: "from 8 years",
-      description: "Where to grow your business as a photographer: site or social media?",
-      image: "💻"
+      description:
+        "Where to grow your business as a photographer: site or social media?",
+      image: "💻",
     },
     {
       title: "Community management",
       subtitle: "made simple",
-      description: "Streamline your community operations with our comprehensive platform.",
-      image: "👥"
+      description:
+        "Streamline your community operations with our comprehensive platform.",
+      image: "👥",
     },
     {
       title: "Grow your network",
       subtitle: "effortlessly",
-      description: "Connect with like-minded professionals and expand your reach.",
-      image: "🌱"
-    }
+      description:
+        "Connect with like-minded professionals and expand your reach.",
+      image: "🌱",
+    },
   ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -53,14 +57,6 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const clientLogos = [
     { name: "Client 1", icon: "🏢" },
     { name: "Client 2", icon: "🌟" },
@@ -68,40 +64,67 @@ export default function Home() {
     { name: "Client 4", icon: "🚀" },
     { name: "Client 5", icon: "💎" },
     { name: "Client 6", icon: "🎯" },
-    { name: "Client 7", icon: "🔥" }
+    { name: "Client 7", icon: "🔥" },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrollY > 50 ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
+        }`}
+      >
+        <div className="mx-auto px-6 py-4 max-w-7xl">
+          <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">N</span>
+              <div className="flex justify-center items-center bg-green-500 rounded w-8 h-8">
+                <span className="font-bold text-white text-sm">N</span>
               </div>
-              <span className="text-2xl font-bold text-gray-900">Nexcent</span>
+              <span className="font-bold text-gray-900 text-2xl">Nexcent</span>
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Home</a>
-              <a href="#features" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Features</a>
-              <a href="#community" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Community</a>
-              <a href="#blog" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Blog</a>
-              <a href="#pricing" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Pricing</a>
-              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md transition-colors font-medium flex items-center">
+              <a
+                href="#home"
+                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#features"
+                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+              >
+                Features
+              </a>
+              <a
+                href="#community"
+                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+              >
+                Community
+              </a>
+              <a
+                href="#blog"
+                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+              >
+                Blog
+              </a>
+              <a
+                href="#pricing"
+                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+              >
+                Pricing
+              </a>
+              <button className="flex items-center bg-green-500 hover:bg-green-600 px-6 py-2 rounded-md font-medium text-white transition-colors">
                 Register Now
                 <ArrowRight className="ml-2" size={16} />
               </button>
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -111,14 +134,39 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+            <div className="md:hidden mt-4 pb-4 border-gray-200 border-t">
               <div className="flex flex-col space-y-4 mt-4">
-                <a href="#home" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Home</a>
-                <a href="#features" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Features</a>
-                <a href="#community" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Community</a>
-                <a href="#blog" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Blog</a>
-                <a href="#pricing" className="text-gray-700 hover:text-green-500 transition-colors font-medium">Pricing</a>
-                <button className="bg-green-500 text-white px-6 py-2 rounded-md w-fit">
+                <a
+                  href="#home"
+                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                >
+                  Home
+                </a>
+                <a
+                  href="#features"
+                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                >
+                  Features
+                </a>
+                <a
+                  href="#community"
+                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                >
+                  Community
+                </a>
+                <a
+                  href="#blog"
+                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                >
+                  Blog
+                </a>
+                <a
+                  href="#pricing"
+                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                >
+                  Pricing
+                </a>
+                <button className="bg-green-500 px-6 py-2 rounded-md w-fit text-white">
                   Register Now
                 </button>
               </div>
@@ -128,47 +176,47 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Slider */}
-      <section id="home" className="pt-20 pb-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center min-h-[600px]">
+      <section id="home" className="bg-gray-50 pt-20 pb-16">
+        <div className="mx-auto px-6 max-w-7xl">
+          <div className="flex lg:flex-row flex-col items-center min-h-[600px]">
             {/* Left Content */}
-            <div className="lg:w-2/3 lg:pr-12 mb-12 lg:mb-0">
-                <h1 className="text-4xl lg:text-6xl font-semibold text-gray-900 leading-[76px] mb-6">
-                  {slides[currentSlide].title}
-                  <span className="block text-green-500">
-                    {slides[currentSlide].subtitle}
-                  </span>
-                </h1>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  {slides[currentSlide].description}
-                </p>
-                <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  Register
-                </button>
+            <div className="mb-12 lg:mb-0 lg:pr-12 lg:w-2/3">
+              <h1 className="mb-6 font-semibold text-gray-900 text-4xl lg:text-6xl leading-[76px]">
+                {slides[currentSlide].title}
+                <span className="block text-green-500">
+                  {slides[currentSlide].subtitle}
+                </span>
+              </h1>
+              <p className="mb-8 text-gray-600 text-lg leading-relaxed">
+                {slides[currentSlide].description}
+              </p>
+              <button className="bg-green-500 hover:bg-green-600 hover:shadow-lg px-8 py-4 rounded-md font-semibold text-white hover:scale-105 transition-all duration-300">
+                Register
+              </button>
             </div>
 
             {/* Right Illustration */}
-            <div className="lg:w-1/3 relative">
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-auto">
+            <div className="relative lg:w-1/3">
+              <div className="relative bg-white shadow-2xl mx-auto p-8 rounded-2xl max-w-md">
                 {/* Monitor/Dashboard Illustration */}
-                <div className="bg-gray-100 rounded-lg p-6 mb-4">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-gray-100 mb-4 p-6 rounded-lg">
+                  <div className="flex justify-between items-center mb-4">
                     <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="bg-red-400 rounded-full w-3 h-3"></div>
+                      <div className="bg-yellow-400 rounded-full w-3 h-3"></div>
+                      <div className="bg-green-400 rounded-full w-3 h-3"></div>
                     </div>
                     <Monitor className="text-gray-400" size={20} />
                   </div>
                   <div className="space-y-3">
-                    <div className="h-4 bg-green-200 rounded w-3/4"></div>
-                    <div className="h-4 bg-gray-200 rounded w-full"></div>
-                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
-                    <div className="grid grid-cols-2 gap-2 mt-4">
-                      <div className="h-16 bg-green-100 rounded flex items-center justify-center">
+                    <div className="bg-green-200 rounded w-3/4 h-4"></div>
+                    <div className="bg-gray-200 rounded w-full h-4"></div>
+                    <div className="bg-gray-200 rounded w-2/3 h-4"></div>
+                    <div className="gap-2 grid grid-cols-2 mt-4">
+                      <div className="flex justify-center items-center bg-green-100 rounded h-16">
                         <Code className="text-green-500" size={24} />
                       </div>
-                      <div className="h-16 bg-blue-100 rounded flex items-center justify-center">
+                      <div className="flex justify-center items-center bg-blue-100 rounded h-16">
                         <Settings className="text-blue-500" size={24} />
                       </div>
                     </div>
@@ -179,46 +227,34 @@ export default function Home() {
           </div>
 
           {/* Slider Controls */}
-          <div className="flex items-center justify-center mt-12 space-x-4">
-            <button
-              onClick={prevSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
-            >
-              <ChevronLeft className="text-gray-600" size={20} />
-            </button>
-            
+          <div className="flex justify-center items-center space-x-4 mt-12">
             <div className="flex space-x-2">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-green-500' : 'bg-gray-300'
+                    index === currentSlide ? "bg-green-500" : "bg-gray-300"
                   }`}
                 />
               ))}
             </div>
-            
-            <button
-              onClick={nextSlide}
-              className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
-            >
-              <ChevronRight className="text-gray-600" size={20} />
-            </button>
           </div>
         </div>
       </section>
 
       {/* Clients Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Clients</h2>
-          <p className="text-gray-600 mb-12">We have been working with some Fortune 500+ clients</p>
-          
-          <div className="grid grid-cols-3 md:grid-cols-7 gap-8 items-center justify-items-center">
+      <section className="bg-white py-16">
+        <div className="mx-auto px-6 max-w-7xl text-center">
+          <h2 className="mb-4 font-bold text-gray-900 text-3xl">Our Clients</h2>
+          <p className="mb-12 text-gray-600">
+            We have been working with some Fortune 500+ clients
+          </p>
+
+          <div className="justify-items-center items-center gap-8 grid grid-cols-3 md:grid-cols-7">
             {clientLogos.map((client, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-green-50 transition-colors">
+                <div className="flex justify-center items-center bg-gray-100 group-hover:bg-green-50 rounded-lg w-16 h-16 transition-colors">
                   <span className="text-2xl group-hover:scale-110 transition-transform">
                     {client.icon}
                   </span>
@@ -230,58 +266,58 @@ export default function Home() {
       </section>
 
       {/* Community Management Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+      <section className="bg-whte py-20">
+        <div className="mx-auto px-6 max-w-7xl text-center">
+          <h2 className="mb-6 font-bold text-gray-900 text-4xl">
             Manage your entire community
             <span className="block text-green-500">in a single system</span>
           </h2>
-          <p className="text-lg text-gray-600 mb-16 max-w-2xl mx-auto">
+          <p className="mx-auto mb-16 max-w-2xl text-gray-600 text-lg">
             Who is Nextcent suitable for?
           </p>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="gap-12 grid md:grid-cols-3">
             {/* Membership Organizations */}
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
+            <div className="group shadow-sm p-8 rounded-lg text-center">
+              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <Users className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
                 Membership
                 <span className="block">Organisations</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Our membership management software provides full automation of 
+                Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
 
             {/* National Associations */}
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
+            <div className="group shadow-sm p-8 rounded-lg text-center">
+              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <Building2 className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
                 National
                 <span className="block">Associations</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Our membership management software provides full automation of 
+                Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
 
             {/* Clubs And Groups */}
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
+            <div className="group shadow-sm p-8 rounded-lg text-center">
+              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <UserCheck className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
                 Clubs And
                 <span className="block">Groups</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Our membership management software provides full automation of 
+                Our membership management software provides full automation of
                 membership renewals and payments
               </p>
             </div>
@@ -289,31 +325,179 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pixelgrade Story Section */}
+      <section className="py-20">
+        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+          {/* Left Illustration */}
+          <div className="flex justify-center md:w-2/5">
+            <Image
+              src="/unseen.webp"
+              alt="Pixelgrade Story"
+              width={260} // 最大幅に合わせて指定
+              height={0} // 高さを自動にしたい場合、styleで対応
+              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
+              style={{ height: "auto" }}
+              priority // LCP対策したいなら optional
+            />
+          </div>
+          {/* Right Text */}
+          <div className="md:w-3/5">
+            <h2 className="mb-4 font-bold text-4xl tracking-wide">
+              The unseen of spending three
+              <br />
+              years at Pixelgrade
+            </h2>
+            <p className="mb-6 text-gray-600 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+            </p>
+            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white transition">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-gray-50 py-20">
+        <div className="flex flex-row justify-between items-center mx-auto px-6 max-w-7xl">
+          <div className="h-24">
+            <p className="mb-2 text-gray-700 text-4xl">Helping a local</p>
+            <h2 className="mb-2 font-bold text-3xl md:text-4xl">
+              <span className="text-green-500">business reinvent itself</span>
+            </h2>
+            <div className="text-gray-500 text-sm">
+              We reached here with our hard work and dedication
+            </div>
+          </div>
+
+          <div className="gap-8 grid grid-cols-2 pl-[20px] w-1/2">
+            <div className="flex flex-row items-center">
+              <Users className="mr-4 w-10 h-10 text-green-500" />
+              <div>
+                <p className="font-bold text-3xl">2,245,341</p>
+                <p className="text-gray-500 text-sm">Members</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center">
+              <Building2 className="mr-4 w-10 h-10 text-green-500" />
+              <div>
+                <p className="font-bold text-3xl">46,328</p>
+                <p className="text-gray-500 text-sm">Clubs</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center">
+              <CalendarDays className="mr-4 w-10 h-10 text-green-500" />
+              <div>
+                <p className="font-bold text-3xl">828,867</p>
+                <p className="text-gray-500 text-sm">Event Bookings</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center">
+              <CreditCard className="mr-4 w-10 h-10 text-green-500" />
+              <div>
+                <p className="font-bold text-3xl">1,926,436</p>
+                <p className="text-gray-500 text-sm">Payments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tutorial Section */}
+      <section className="bg-white py-20">
+        <div className="flex md:flex-row flex-col items-center gap-12 mx-auto px-6 max-w-7xl">
+          <div className="w-1/3">
+            <Image
+              src="/tutorial.webp"
+              alt="Pixelgrade Story"
+              width={260} // 最大幅に合わせて指定
+              height={0} // 高さを自動にしたい場合、styleで対応
+              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
+              style={{ height: "auto" }}
+              priority // LCP対策したいなら optional
+            />
+          </div>
+          <div className="w-2/3">
+            <h2 className="mb-4 font-semibold text-gray-900 text-5xl">
+              How to design your site footer like we did
+            </h2>
+            <p className="mb-6 text-gray-600 leading-relaxed">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt molestie, massa nunc varius arcu, at
+              scelerisque elit erat a magna. Donec quis erat at libero ultrices
+              mollis. In hac habitasse platea dictumst. Vivamus vehicula leo
+              dui, at porta nisi facilisis finibus. In euismod augue vitae nisi
+              ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+              commodo faucibus efficitur quis massa. Praesent felis est, finibus
+              et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
+              ipsum id gravida.
+            </p>
+            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white transition">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="bg-white py-20 text-center">
+        <div className="mx-auto px-6 max-w-4xl">
+          <div className="mb-8">
+            <img
+              src="/tesla-logo.png"
+              alt="Client Logo"
+              className="mx-auto w-20 h-20"
+            />
+          </div>
+          <p className="mb-6 text-gray-700 italic">
+            “Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+            enim metus.”
+          </p>
+          <h3 className="font-bold text-gray-900">Tim Smith</h3>
+          <p className="text-gray-500 text-sm">
+            British Dragon Boat Racing Association
+          </p>
+          {/* Client logos again */}
+          <div className="flex flex-wrap justify-center gap-6 mt-8">
+            {clientLogos.map((client, i) => (
+              <div key={i} className="text-2xl">
+                {client.icon}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="bg-gray-900 py-16 text-white">
+        <div className="mx-auto px-6 max-w-7xl">
+          <div className="gap-8 grid md:grid-cols-4">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-green-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold">N</span>
+                <div className="flex justify-center items-center bg-green-500 rounded w-10 h-10">
+                  <span className="font-bold text-white">N</span>
                 </div>
-                <span className="text-2xl font-bold">Nexcent</span>
+                <span className="font-bold text-2xl">Nexcent</span>
               </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Copyright © 2020 Nexcent ltd.<br />
+              <p className="mb-6 text-gray-400 leading-relaxed">
+                Copyright © 2020 Nexcent ltd.
+                <br />
                 All rights reserved
               </p>
               <div className="flex space-x-4">
                 {/* Social Media Icons */}
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>📘</span>
                 </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>🐦</span>
                 </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>📷</span>
                 </div>
               </div>
@@ -321,25 +505,95 @@ export default function Home() {
 
             {/* Company Links */}
             <div>
-              <h4 className="font-semibold mb-6">Company</h4>
+              <h4 className="mb-6 font-semibold">Company</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">About us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Contact us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Pricing</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Testimonials</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Testimonials
+                  </a>
+                </li>
               </ul>
             </div>
 
             {/* Support Links */}
             <div>
-              <h4 className="font-semibold mb-6">Support</h4>
+              <h4 className="mb-6 font-semibold">Support</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Help center</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Terms of service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Legal</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Privacy policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Status</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Help center
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Terms of service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Legal
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    Status
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

@@ -181,16 +181,16 @@ export default function Home() {
           <div className="flex lg:flex-row flex-col items-center min-h-[600px]">
             {/* Left Content */}
             <div className="mb-12 lg:mb-0 lg:pr-12 lg:w-2/3">
-              <h1 className="mb-6 font-semibold text-gray-900 text-4xl lg:text-6xl leading-[76px]">
+              <h1 className="mb-6 font-semibold text-gray-900 text-2xl md:text-4xl lg:text-6xl leading-snug md:leading-[76px]">
                 {slides[currentSlide].title}
                 <span className="block text-green-500">
                   {slides[currentSlide].subtitle}
                 </span>
               </h1>
-              <p className="mb-8 text-gray-600 text-lg leading-relaxed">
+              <p className="mb-8 text-gray-600 text-base md:text-lg leading-relaxed">
                 {slides[currentSlide].description}
               </p>
-              <button className="bg-green-500 hover:bg-green-600 hover:shadow-lg px-8 py-4 rounded-md font-semibold text-white hover:scale-105 transition-all duration-300">
+              <button className="bg-green-500 hover:bg-green-600 hover:shadow-lg px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
                 Register
               </button>
             </div>
@@ -236,6 +236,7 @@ export default function Home() {
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === currentSlide ? "bg-green-500" : "bg-gray-300"
                   }`}
+                  aria-label={`Slide ${index + 1}`}
                 />
               ))}
             </div>
@@ -246,8 +247,10 @@ export default function Home() {
       {/* Clients Section */}
       <section className="bg-white py-16">
         <div className="mx-auto px-6 max-w-7xl text-center">
-          <h2 className="mb-4 font-bold text-gray-900 text-3xl">Our Clients</h2>
-          <p className="mb-12 text-gray-600">
+          <h2 className="mb-4 font-bold text-gray-900 text-2xl md:text-4xl">
+            Our Clients
+          </h2>
+          <p className="mb-12 text-gray-600 text-base md:text-lg">
             We have been working with some Fortune 500+ clients
           </p>
 
@@ -266,13 +269,13 @@ export default function Home() {
       </section>
 
       {/* Community Management Section */}
-      <section className="bg-whte py-20">
+      <section className="bg-white py-20">
         <div className="mx-auto px-6 max-w-7xl text-center">
-          <h2 className="mb-6 font-bold text-gray-900 text-4xl">
+          <h2 className="mb-6 font-bold text-gray-900 text-2xl md:text-4xl">
             Manage your entire community
-            <span className="block text-green-500">in a single system</span>
+            <span className="block">in a single system</span>
           </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-gray-600 text-lg">
+          <p className="mx-auto mb-16 max-w-2xl text-gray-500 text-base md:text-lg">
             Who is Nextcent suitable for?
           </p>
 
@@ -282,11 +285,11 @@ export default function Home() {
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <Users className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
+              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 Membership
-                <span className="block">Organisations</span>
+                <span className="block text-xl md:text-2xl">Organisations</span>
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
@@ -297,11 +300,11 @@ export default function Home() {
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <Building2 className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
+              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 National
-                <span className="block">Associations</span>
+                <span className="block text-xl md:text-2xl">Associations</span>
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
@@ -312,11 +315,11 @@ export default function Home() {
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
                 <UserCheck className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-3xl">
+              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 Clubs And
-                <span className="block">Groups</span>
+                <span className="block text-xl md:text-2xl">Groups</span>
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                 Our membership management software provides full automation of
                 membership renewals and payments
               </p>
@@ -333,27 +336,27 @@ export default function Home() {
             <Image
               src="/unseen.webp"
               alt="Pixelgrade Story"
-              width={260} // 最大幅に合わせて指定
-              height={0} // 高さを自動にしたい場合、styleで対応
+              width={260}
+              height={0}
               className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
               style={{ height: "auto" }}
-              priority // LCP対策したいなら optional
+              priority
             />
           </div>
           {/* Right Text */}
           <div className="md:w-3/5">
-            <h2 className="mb-4 font-bold text-4xl tracking-wide">
+            <h2 className="mb-4 font-bold text-2xl md:text-4xl tracking-wide">
               The unseen of spending three
               <br />
               years at Pixelgrade
             </h2>
-            <p className="mb-6 text-gray-600 leading-relaxed">
+            <p className="mb-6 text-gray-600 text-sm md:text-base leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
               tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
             </p>
-            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white transition">
+            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white text-sm md:text-base transition">
               Learn More
             </button>
           </div>
@@ -362,44 +365,48 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="bg-gray-50 py-20">
-        <div className="flex flex-row justify-between items-center mx-auto px-6 max-w-7xl">
-          <div className="h-24">
-            <p className="mb-2 text-gray-700 text-4xl">Helping a local</p>
-            <h2 className="mb-2 font-bold text-3xl md:text-4xl">
+        <div className="flex md:flex-row flex-col justify-between items-center gap-10 md:gap-0 mx-auto px-6 max-w-7xl">
+          <div className="h-24 md:text-left text-center">
+            <p className="mb-2 text-gray-700 text-2xl md:text-4xl">
+              Helping a local
+            </p>
+            <h2 className="mb-2 font-bold text-2xl md:text-4xl">
               <span className="text-green-500">business reinvent itself</span>
             </h2>
-            <div className="text-gray-500 text-sm">
+            <div className="text-gray-500 text-sm md:text-base">
               We reached here with our hard work and dedication
             </div>
           </div>
 
-          <div className="gap-8 grid grid-cols-2 pl-[20px] w-1/2">
+          <div className="gap-8 grid grid-cols-2 w-full md:w-1/2">
             <div className="flex flex-row items-center">
-              <Users className="mr-4 w-10 h-10 text-green-500" />
+              <Users className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
               <div>
-                <p className="font-bold text-3xl">2,245,341</p>
-                <p className="text-gray-500 text-sm">Members</p>
+                <p className="font-bold text-2xl md:text-3xl">2,245,341</p>
+                <p className="text-gray-500 text-xs md:text-sm">Members</p>
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <Building2 className="mr-4 w-10 h-10 text-green-500" />
+              <Building2 className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
               <div>
-                <p className="font-bold text-3xl">46,328</p>
-                <p className="text-gray-500 text-sm">Clubs</p>
+                <p className="font-bold text-2xl md:text-3xl">46,328</p>
+                <p className="text-gray-500 text-xs md:text-sm">Clubs</p>
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <CalendarDays className="mr-4 w-10 h-10 text-green-500" />
+              <CalendarDays className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
               <div>
-                <p className="font-bold text-3xl">828,867</p>
-                <p className="text-gray-500 text-sm">Event Bookings</p>
+                <p className="font-bold text-2xl md:text-3xl">828,867</p>
+                <p className="text-gray-500 text-xs md:text-sm">
+                  Event Bookings
+                </p>
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <CreditCard className="mr-4 w-10 h-10 text-green-500" />
+              <CreditCard className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
               <div>
-                <p className="font-bold text-3xl">1,926,436</p>
-                <p className="text-gray-500 text-sm">Payments</p>
+                <p className="font-bold text-2xl md:text-3xl">1,926,436</p>
+                <p className="text-gray-500 text-xs md:text-sm">Payments</p>
               </div>
             </div>
           </div>
@@ -407,33 +414,37 @@ export default function Home() {
       </section>
 
       {/* Tutorial Section */}
-      <section className="bg-white py-20">
-        <div className="flex md:flex-row flex-col items-center gap-12 mx-auto px-6 max-w-7xl">
-          <div className="w-1/3">
+      <section className="py-20">
+        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+          <div className="flex justify-center md:w-2/5">
             <Image
               src="/tutorial.webp"
               alt="Pixelgrade Story"
-              width={260} // 最大幅に合わせて指定
-              height={0} // 高さを自動にしたい場合、styleで対応
+              width={260}
+              height={0}
               className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
               style={{ height: "auto" }}
-              priority // LCP対策したいなら optional
+              priority
             />
           </div>
-          <div className="w-2/3">
-            <h2 className="mb-4 font-semibold text-gray-900 text-5xl">
-              How to design your site footer like we did
+          <div className="md:w-3/5">
+            <h2 className="mb-4 font-bold text-2xl md:text-4xl tracking-wide">
+              How to design your site footer like
+              <br className="hidden md:block" /> we did
             </h2>
-            <p className="mb-6 text-gray-600 leading-relaxed">
-              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
-              augue nec tincidunt molestie, massa nunc varius arcu, at
-              scelerisque elit erat a magna. Donec quis erat at libero ultrices
-              mollis. In hac habitasse platea dictumst. Vivamus vehicula leo
-              dui, at porta nisi facilisis finibus. In euismod augue vitae nisi
-              ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
-              commodo faucibus efficitur quis massa. Praesent felis est, finibus
-              et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
-              ipsum id gravida.
+            <p className="mb-6 text-gray-600 text-sm md:text-base leading-relaxed">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam
+              tempor,augue nec tincidunt <br className="hidden md:block" />
+              molestie, massa nunc varius arcu, at scelerisque elit erat a
+              magna. Donec quis erat at <br className="hidden md:block" />
+              libero ultrices mollis. In hac habitasse platea dictumst. Vivamus
+              vehicula leo dui, at porta <br className="hidden md:block" />
+              nisi facilisis finibus. In euismod augue vitae nisi ultricies, non
+              aliquet urna tincidunt. Integer <br className="hidden md:block" />
+              in nisi eget nulla commodo faucibus efficitur quis massa. Praesent
+              felis est, finibus et nisi <br className="hidden md:block" />
+              ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum
+              id gravida.
             </p>
             <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white transition">
               Learn More

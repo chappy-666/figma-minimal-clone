@@ -79,7 +79,7 @@ export default function Home() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="flex justify-center items-center bg-green-500 rounded w-8 h-8">
+              <div className="flex justify-center items-center bg-mini-500 rounded w-8 h-8">
                 <span className="font-bold text-white text-sm">N</span>
               </div>
               <span className="font-bold text-gray-900 text-2xl">Nexcent</span>
@@ -89,35 +89,35 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="#home"
-                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
               >
                 Home
               </a>
               <a
                 href="#features"
-                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
               >
                 Features
               </a>
               <a
                 href="#community"
-                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
               >
                 Community
               </a>
               <a
                 href="#blog"
-                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
               >
                 Blog
               </a>
               <a
                 href="#pricing"
-                className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
               >
                 Pricing
               </a>
-              <button className="flex items-center bg-green-500 hover:bg-green-600 px-6 py-2 rounded-md font-medium text-white transition-colors">
+              <button className="flex items-center bg-mini-500 hover:bg-mini-600 px-6 py-2 rounded-md font-medium text-white transition-colors">
                 Register Now
                 <ArrowRight className="ml-2" size={16} />
               </button>
@@ -138,35 +138,35 @@ export default function Home() {
               <div className="flex flex-col space-y-4 mt-4">
                 <a
                   href="#home"
-                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                  className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
                 >
                   Home
                 </a>
                 <a
                   href="#features"
-                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                  className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
                 >
                   Features
                 </a>
                 <a
                   href="#community"
-                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                  className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
                 >
                   Community
                 </a>
                 <a
                   href="#blog"
-                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                  className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
                 >
                   Blog
                 </a>
                 <a
                   href="#pricing"
-                  className="font-medium text-gray-700 hover:text-green-500 transition-colors"
+                  className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
                 >
                   Pricing
                 </a>
-                <button className="bg-green-500 px-6 py-2 rounded-md w-fit text-white">
+                <button className="bg-mini-500 px-6 py-2 rounded-md w-fit text-white">
                   Register Now
                 </button>
               </div>
@@ -183,14 +183,14 @@ export default function Home() {
             <div className="mb-12 lg:mb-0 lg:pr-12 lg:w-2/3">
               <h1 className="mb-6 font-semibold text-gray-900 text-2xl md:text-4xl lg:text-6xl leading-snug md:leading-[76px]">
                 {slides[currentSlide].title}
-                <span className="block text-green-500">
+                <span className="block text-mini-500">
                   {slides[currentSlide].subtitle}
                 </span>
               </h1>
               <p className="mb-8 text-gray-600 text-base md:text-lg leading-relaxed">
                 {slides[currentSlide].description}
               </p>
-              <button className="bg-green-500 hover:bg-green-600 hover:shadow-lg px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
+              <button className="bg-mini-500 hover:bg-mini-600 hover:shadow-lg px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
                 Register
               </button>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
                     <div className="flex space-x-2">
                       <div className="bg-red-400 rounded-full w-3 h-3"></div>
                       <div className="bg-yellow-400 rounded-full w-3 h-3"></div>
-                      <div className="bg-green-400 rounded-full w-3 h-3"></div>
+                      <div className="bg-mini-400 rounded-full w-3 h-3"></div>
                     </div>
                     <Monitor className="text-gray-400" size={20} />
                   </div>
@@ -214,7 +214,7 @@ export default function Home() {
                     <div className="bg-gray-200 rounded w-2/3 h-4"></div>
                     <div className="gap-2 grid grid-cols-2 mt-4">
                       <div className="flex justify-center items-center bg-green-100 rounded h-16">
-                        <Code className="text-green-500" size={24} />
+                        <Code className="text-mini-500" size={24} />
                       </div>
                       <div className="flex justify-center items-center bg-blue-100 rounded h-16">
                         <Settings className="text-blue-500" size={24} />
@@ -234,7 +234,7 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? "bg-green-500" : "bg-gray-300"
+                    index === currentSlide ? "bg-mini-500" : "bg-gray-300"
                   }`}
                   aria-label={`Slide ${index + 1}`}
                 />
@@ -283,7 +283,7 @@ export default function Home() {
             {/* Membership Organizations */}
             <div className="group shadow-sm p-8 rounded-lg text-center">
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <Users className="w-10 h-10 text-green-600" />
+                <Users className="w-10 h-10 text-mini-600" />
               </div>
               <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 Membership
@@ -298,7 +298,7 @@ export default function Home() {
             {/* National Associations */}
             <div className="group shadow-sm p-8 rounded-lg text-center">
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <Building2 className="w-10 h-10 text-green-600" />
+                <Building2 className="w-10 h-10 text-mini-600" />
               </div>
               <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 National
@@ -313,7 +313,7 @@ export default function Home() {
             {/* Clubs And Groups */}
             <div className="group shadow-sm p-8 rounded-lg text-center">
               <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <UserCheck className="w-10 h-10 text-green-600" />
+                <UserCheck className="w-10 h-10 text-mini-600" />
               </div>
               <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
                 Clubs And
@@ -356,7 +356,7 @@ export default function Home() {
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
               tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
             </p>
-            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white text-sm md:text-base transition">
+            <button className="bg-mini-500 hover:bg-mini-600 px-6 py-3 rounded-md font-semibold text-white text-sm md:text-base transition">
               Learn More
             </button>
           </div>
@@ -371,7 +371,7 @@ export default function Home() {
               Helping a local
             </p>
             <h2 className="mb-2 font-bold text-2xl md:text-4xl">
-              <span className="text-green-500">business reinvent itself</span>
+              <span className="text-mini-500">business reinvent itself</span>
             </h2>
             <div className="text-gray-500 text-sm md:text-base">
               We reached here with our hard work and dedication
@@ -380,21 +380,21 @@ export default function Home() {
 
           <div className="gap-8 grid grid-cols-2 w-full md:w-1/2">
             <div className="flex flex-row items-center">
-              <Users className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
+              <Users className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
               <div>
                 <p className="font-bold text-2xl md:text-3xl">2,245,341</p>
                 <p className="text-gray-500 text-xs md:text-sm">Members</p>
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <Building2 className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
+              <Building2 className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
               <div>
                 <p className="font-bold text-2xl md:text-3xl">46,328</p>
                 <p className="text-gray-500 text-xs md:text-sm">Clubs</p>
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <CalendarDays className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
+              <CalendarDays className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
               <div>
                 <p className="font-bold text-2xl md:text-3xl">828,867</p>
                 <p className="text-gray-500 text-xs md:text-sm">
@@ -403,7 +403,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row items-center">
-              <CreditCard className="mr-4 w-8 md:w-10 h-8 md:h-10 text-green-500" />
+              <CreditCard className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
               <div>
                 <p className="font-bold text-2xl md:text-3xl">1,926,436</p>
                 <p className="text-gray-500 text-xs md:text-sm">Payments</p>
@@ -446,7 +446,7 @@ export default function Home() {
               ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum
               id gravida.
             </p>
-            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-md font-semibold text-white transition">
+            <button className="bg-mini-500 hover:bg-mini-600 px-6 py-3 rounded-md font-semibold text-white transition">
               Learn More
             </button>
           </div>
@@ -454,31 +454,47 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="bg-white py-20 text-center">
-        <div className="mx-auto px-6 max-w-4xl">
-          <div className="mb-8">
-            <img
-              src="/tesla-logo.png"
-              alt="Client Logo"
-              className="mx-auto w-20 h-20"
+      <section className="bg-gray-50 py-20">
+        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+          <div className="flex justify-center items-center mb-8 w-1/3">
+            <Image
+              src="/unseen.webp"
+              alt="Pixelgrade Story"
+              width={260}
+              height={0}
+              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
+              style={{ height: "auto" }}
+              priority
             />
           </div>
-          <p className="mb-6 text-gray-700 italic">
-            “Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
-            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
-            enim metus.”
-          </p>
-          <h3 className="font-bold text-gray-900">Tim Smith</h3>
-          <p className="text-gray-500 text-sm">
-            British Dragon Boat Racing Association
-          </p>
-          {/* Client logos again */}
-          <div className="flex flex-wrap justify-center gap-6 mt-8">
-            {clientLogos.map((client, i) => (
-              <div key={i} className="text-2xl">
-                {client.icon}
-              </div>
-            ))}
+          <div className="w-2/3">
+            <p className="mb-[11.14px] text-gray-700 italic">
+              Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+              lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+              enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+              enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet
+              elit at ligula molestie, nec molestie mi blandit. Suspendisse
+              cursus tellus sed augue ultrices, quis tristique nulla sodales.
+              Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse
+              potenti. Quisque malesuada enim sapien, vitae placerat ante
+              feugiat eget. Quisque vulputate odio neque, eget efficitur libero
+              condimentum id. Curabitur id nibh id sem dignissim finibus ac sit
+              amet magna.
+            </p>
+            <div className="mb-2 font-bold text-mini-500 text-xl">
+              Tim Smith
+            </div>
+            <p className="text-gray-500 text-sm">
+              British Dragon Boat Racing Association
+            </p>
+            {/* Client logos again */}
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+              {clientLogos.map((client, i) => (
+                <div key={i} className="text-2xl">
+                  {client.icon}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -490,7 +506,7 @@ export default function Home() {
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="flex justify-center items-center bg-green-500 rounded w-10 h-10">
+                <div className="flex justify-center items-center bg-mini-500 rounded w-10 h-10">
                   <span className="font-bold text-white">N</span>
                 </div>
                 <span className="font-bold text-2xl">Nexcent</span>
@@ -502,13 +518,13 @@ export default function Home() {
               </p>
               <div className="flex space-x-4">
                 {/* Social Media Icons */}
-                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-mini-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>📘</span>
                 </div>
-                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-mini-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>🐦</span>
                 </div>
-                <div className="flex justify-center items-center bg-gray-800 hover:bg-green-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
+                <div className="flex justify-center items-center bg-gray-800 hover:bg-mini-500 rounded-full w-10 h-10 transition-colors cursor-pointer">
                   <span>📷</span>
                 </div>
               </div>
@@ -521,7 +537,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     About us
                   </a>
@@ -529,7 +545,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Blog
                   </a>
@@ -537,7 +553,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Contact us
                   </a>
@@ -545,7 +561,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Pricing
                   </a>
@@ -553,7 +569,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Testimonials
                   </a>
@@ -568,7 +584,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Help center
                   </a>
@@ -576,7 +592,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Terms of service
                   </a>
@@ -584,7 +600,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Legal
                   </a>
@@ -592,7 +608,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Privacy policy
                   </a>
@@ -600,7 +616,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-green-400 transition-colors"
+                    className="text-gray-400 hover:text-mini-400 transition-colors"
                   >
                     Status
                   </a>

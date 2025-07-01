@@ -5,11 +5,14 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-mini-600: #43A046;
+  --color-mini-500: #28CB8B;
+  --color-mini-400: #81C784;
 }
 
 body {

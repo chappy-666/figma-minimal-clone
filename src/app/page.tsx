@@ -334,7 +334,7 @@ export default function Home() {
           {/* Left Illustration */}
           <div className="flex justify-center md:w-2/5">
             <Image
-              src="/unseen.webp"
+              src="/ui_ux_conversation.png"
               alt="Pixelgrade Story"
               width={260}
               height={0}
@@ -418,7 +418,7 @@ export default function Home() {
         <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
           <div className="flex justify-center md:w-2/5">
             <Image
-              src="/tutorial.webp"
+              src="/secure_login_style.png"
               alt="Pixelgrade Story"
               width={260}
               height={0}
@@ -458,7 +458,7 @@ export default function Home() {
         <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
           <div className="flex justify-center items-center mb-8 w-1/3">
             <Image
-              src="/unseen.webp"
+              src="/futuristic.png"
               alt="Pixelgrade Story"
               width={260}
               height={0}

@@ -499,6 +499,93 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Caring */}
+      <section className="py-20">
+        <div className="flex flex-col items-center mx-auto px-6 max-w-7xl">
+          <h2 className="py-4 font-bold text-2xl md:text-4xl tracking-wide">
+            Caring is the new marketing
+          </h2>
+          <div className="text-gray-500">
+            The Nextcent blog is the best place to read about the latest
+            membership insights,
+            <br /> trends and more. See who's joining the community, <br />
+            read about how our community are increasing their membership income
+            and lot's more.​
+          </div>
+          <div className="gap-6 grid md:grid-cols-3">
+            {/* Membership Organizations */}
+            <div className="flex flex-col justify-center items-center">
+              <Image
+                src="/secure_login_style.png"
+                alt="Pixelgrade Story"
+                width={350}
+                height={0}
+                className="w-[380px] h-auto"
+                style={{ height: "auto" }}
+                priority
+              />
+              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md py-4 rounded-xl w-2/3">
+                <div className="mb-4 w-full text-neutral-grey text-lg text-center">
+                  Creating Streamlined <br />
+                  Safeguarding Processes with <br />
+                  OneRen
+                </div>
+                <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
+                  Register Now
+                  <ArrowRight className="ml-2" size={16} />
+                </button>
+              </div>
+            </div>
+
+            {/* National Associations */}
+            <div className="flex flex-col justify-center items-center">
+              <Image
+                src="/secure_login_style.png"
+                alt="Pixelgrade Story"
+                width={350}
+                height={0}
+                className="w-[380px] h-auto"
+                style={{ height: "auto" }}
+                priority
+              />
+              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md py-4 rounded-xl w-2/3">
+                <div className="mb-4 w-full text-neutral-grey text-lg text-center">
+                  What are your safeguarding <br /> responsibilities and how can{" "}
+                  <br /> you manage them?
+                </div>
+                <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
+                  Register Now
+                  <ArrowRight className="ml-2" size={16} />
+                </button>
+              </div>
+            </div>
+
+            {/* Clubs And Groups */}
+            <div className="flex flex-col justify-center items-center">
+              <Image
+                src="/secure_login_style.png"
+                alt="Pixelgrade Story"
+                width={350}
+                height={0}
+                className="w-[380px] h-auto"
+                style={{ height: "auto" }}
+                priority
+              />
+              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md px-2 py-4 rounded-xl w-2/3">
+                <div className="mb-4 w-full font-medium text-neutral-grey text-lg text-center">
+                  Revamping the Membership <br /> Model with Triathlon <br />{" "}
+                  Australia
+                </div>
+                <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
+                  Register Now
+                  <ArrowRight className="ml-2" size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 py-16 text-white">
         <div className="mx-auto px-6 max-w-7xl">

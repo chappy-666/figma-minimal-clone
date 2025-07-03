@@ -524,7 +524,7 @@ export default function Home() {
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md py-4 rounded-xl w-2/3">
+              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md py-4 rounded-xl w-2/3">
                 <div className="mb-4 w-full text-neutral-grey text-lg text-center">
                   Creating Streamlined <br />
                   Safeguarding Processes with <br />
@@ -548,7 +548,7 @@ export default function Home() {
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md py-4 rounded-xl w-2/3">
+              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md py-4 rounded-xl w-2/3">
                 <div className="mb-4 w-full text-neutral-grey text-lg text-center">
                   What are your safeguarding <br /> responsibilities and how can{" "}
                   <br /> you manage them?
@@ -571,7 +571,7 @@ export default function Home() {
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-gray-50 shadow-md px-2 py-4 rounded-xl w-2/3">
+              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md px-2 py-4 rounded-xl w-2/3">
                 <div className="mb-4 w-full font-medium text-neutral-grey text-lg text-center">
                   Revamping the Membership <br /> Model with Triathlon <br />{" "}
                   Australia

@@ -508,9 +508,9 @@ export default function Home() {
           <div className="text-gray-500">
             The Nextcent blog is the best place to read about the latest
             membership insights,
-            <br /> trends and more. See who's joining the community, <br />
+            <br /> trends and more. See who&apos;s joining the community, <br />
             read about how our community are increasing their membership income
-            and lot's more.​
+            and lot&apos;s more.​
           </div>
           <div className="gap-6 grid md:grid-cols-3">
             {/* Membership Organizations */}

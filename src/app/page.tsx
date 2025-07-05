@@ -510,7 +510,7 @@ export default function Home() {
             membership insights,
             <br /> trends and more. See who&apos;s joining the community, <br />
             read about how our community are increasing their membership income
-            and lot&apos;s more.​
+            and lot&apos;s more .
           </div>
           <div className="gap-6 grid md:grid-cols-3">
             {/* Membership Organizations */}
@@ -582,6 +582,22 @@ export default function Home() {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pellentesque Section */}
+      <section>
+        <div className="flex flex-col gap-12 bg-netural-silver py-8">
+          <div className="w-full font-semibold text-[44px] text-center leading-[44px]">
+            Pellentesque suscipit <br />
+            fringilla libero eu.
+          </div>
+          <div className="flex justify-center w-full">
+            <button className="flex items-center bg-mini-500 hover:bg-mini-600 hover:shadow-lg mx-auto px-4 py-3 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all">
+              Get a Demo
+              <ArrowRight className="ml-2" size={16} />
+            </button>
           </div>
         </div>
       </section>

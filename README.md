@@ -52,7 +52,7 @@ If you are the original creator and would like this repository modified or remov
 
 ```bash
 git clone https://github.com/chappy-666/figma-minimal-clone.git
-cd figma-minimal-clone
+cd figma-minimal-clone/src
 npm install
 npm run dev
 ```

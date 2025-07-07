@@ -8,9 +8,6 @@ import {
   Users,
   Building2,
   UserCheck,
-  Monitor,
-  Code,
-  Settings,
   CalendarDays,
   CreditCard,
 } from "lucide-react";
@@ -27,20 +24,6 @@ export default function Home() {
       description:
         "Where to grow your business as a photographer: site or social media?",
       image: "💻",
-    },
-    {
-      title: "Community management",
-      subtitle: "made simple",
-      description:
-        "Streamline your community operations with our comprehensive platform.",
-      image: "👥",
-    },
-    {
-      title: "Grow your network",
-      subtitle: "effortlessly",
-      description:
-        "Connect with like-minded professionals and expand your reach.",
-      image: "🌱",
     },
   ];
 
@@ -75,7 +58,7 @@ export default function Home() {
           scrollY > 50 ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
         }`}
       >
-        <div className="mx-auto px-6 py-4 max-w-7xl">
+        <div className="mx-auto px-[100px] py-4 w-[1000px]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
@@ -86,7 +69,7 @@ export default function Home() {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 text-[11px]">
               <a
                 href="#home"
                 className="font-medium text-gray-700 hover:text-mini-500 transition-colors"
@@ -176,53 +159,36 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Slider */}
-      <section id="home" className="bg-gray-50 pt-20 pb-16">
-        <div className="mx-auto px-6 max-w-7xl">
-          <div className="flex lg:flex-row flex-col items-center min-h-[600px]">
+      <section id="home" className="bg-gray-50 py-[126px] h-[416px]">
+        <div className="mx-auto px-[100px] w-[1000px]">
+          <div className="flex flex-row items-center">
             {/* Left Content */}
-            <div className="mb-12 lg:mb-0 lg:pr-12 lg:w-2/3">
-              <h1 className="mb-6 font-semibold text-gray-900 text-2xl md:text-4xl lg:text-6xl leading-snug md:leading-[76px]">
+            <div className="lw-[457px]">
+              <h1 className="font-semibold text-[44.55px]">
                 {slides[currentSlide].title}
                 <span className="block text-mini-500">
                   {slides[currentSlide].subtitle}
                 </span>
               </h1>
-              <p className="mb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+              <p className="mt-[11px] text-[11px] leading-[16.7px] tracking-wider">
                 {slides[currentSlide].description}
               </p>
-              <button className="bg-mini-500 hover:bg-mini-600 hover:shadow-lg px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
+              <button className="bg-mini-500 hover:bg-mini-600 hover:shadow-lg mt-[22px] px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
                 Register
               </button>
             </div>
 
             {/* Right Illustration */}
-            <div className="relative lg:w-1/3">
-              <div className="relative bg-white shadow-2xl mx-auto p-8 rounded-2xl max-w-md">
-                {/* Monitor/Dashboard Illustration */}
-                <div className="bg-gray-100 mb-4 p-6 rounded-lg">
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex space-x-2">
-                      <div className="bg-red-400 rounded-full w-3 h-3"></div>
-                      <div className="bg-yellow-400 rounded-full w-3 h-3"></div>
-                      <div className="bg-mini-400 rounded-full w-3 h-3"></div>
-                    </div>
-                    <Monitor className="text-gray-400" size={20} />
-                  </div>
-                  <div className="space-y-3">
-                    <div className="bg-green-200 rounded w-3/4 h-4"></div>
-                    <div className="bg-gray-200 rounded w-full h-4"></div>
-                    <div className="bg-gray-200 rounded w-2/3 h-4"></div>
-                    <div className="gap-2 grid grid-cols-2 mt-4">
-                      <div className="flex justify-center items-center bg-green-100 rounded h-16">
-                        <Code className="text-mini-500" size={24} />
-                      </div>
-                      <div className="flex justify-center items-center bg-blue-100 rounded h-16">
-                        <Settings className="text-blue-500" size={24} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative ml-[72px]">
+              <Image
+                src="/ui_ux_conversation.png"
+                alt="Pixelgrade Story"
+                width={260}
+                height={0}
+                className="w-[272px] h-auto"
+                style={{ height: "auto" }}
+                priority
+              />
             </div>
           </div>
 

@@ -15,7 +15,6 @@ import {
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
 
   const slides = [
     {
@@ -25,13 +24,21 @@ export default function Home() {
         "Where to grow your business as a photographer: site or social media?",
       image: "💻",
     },
+    {
+      title: "Lessons and insights",
+      subtitle: "from 8 years",
+      description:
+        "Where to grow your business as a photographer: site or social media?",
+      image: "💻",
+    },
+    {
+      title: "Lessons and insights",
+      subtitle: "from 8 years",
+      description:
+        "Where to grow your business as a photographer: site or social media?",
+      image: "💻",
+    },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,11 +60,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrollY > 50 ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
-        }`}
-      >
+      <nav className={`w-full z-50  bg-white `}>
         <div className="mx-auto px-[100px] py-4 w-[1000px]">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -159,9 +162,9 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Slider */}
-      <section id="home" className="bg-gray-50 py-[126px] h-[416px]">
+      <section id="home" className="bg-gray-50 py-[67px] h-[416px]">
         <div className="mx-auto px-[100px] w-[1000px]">
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row justify-between items-center">
             {/* Left Content */}
             <div className="lw-[457px]">
               <h1 className="font-semibold text-[44.55px]">
@@ -173,7 +176,7 @@ export default function Home() {
               <p className="mt-[11px] text-[11px] leading-[16.7px] tracking-wider">
                 {slides[currentSlide].description}
               </p>
-              <button className="bg-mini-500 hover:bg-mini-600 hover:shadow-lg mt-[22px] px-6 md:px-8 py-3 md:py-4 rounded-md font-semibold text-white text-sm md:text-base hover:scale-105 transition-all duration-300">
+              <button className="bg-mini-500 hover:bg-mini-600 mt-[22px] px-6 py-3 rounded-md font-semibold text-[11px] text-white text-base">
                 Register
               </button>
             </div>

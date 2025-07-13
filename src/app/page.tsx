@@ -214,24 +214,26 @@ export default function Home() {
       </section>
 
       {/* Clients Section */}
-      <section className="bg-white py-16">
-        <div className="mx-auto px-6 max-w-7xl text-center">
-          <h2 className="mb-4 font-bold text-gray-900 text-2xl md:text-4xl">
+      <section className="bg-white mt-[28px] h-[133px]">
+        <div className="mx-auto w-[1000px] text-center">
+          <h2 className="font-semibold text-[#4D4D4D] text-[36px]">
             Our Clients
           </h2>
-          <p className="mb-12 text-gray-600 text-base md:text-lg">
+          <p className="mb-[11px] text-[#717171] text-[14px] leading-[16.7px] tracking-wider">
             We have been working with some Fortune 500+ clients
           </p>
 
-          <div className="justify-items-center items-center gap-8 grid grid-cols-3 md:grid-cols-7">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="flex justify-center items-center bg-gray-100 group-hover:bg-green-50 rounded-lg w-16 h-16 transition-colors">
-                  <span className="text-2xl group-hover:scale-110 transition-transform">
-                    {client.icon}
-                  </span>
-                </div>
-              </div>
+          <div className="flex justify-between items-center mx-auto w-[800px] h-[68px]">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Image
+                key={index}
+                src="/ui_ux_conversation.png"
+                alt="Pixelgrade Story"
+                width={33}
+                height={33}
+                className="w-[33px] h-[33px]"
+                priority
+              />
             ))}
           </div>
         </div>

@@ -216,10 +216,10 @@ export default function Home() {
       {/* Clients Section */}
       <section className="bg-white mt-[28px] h-[133px]">
         <div className="mx-auto w-[1000px] text-center">
-          <h2 className="font-semibold text-[#4D4D4D] text-[36px]">
+          <h2 className="font-semibold text-[#4D4D4D] text-[25px]">
             Our Clients
           </h2>
-          <p className="mb-[11px] text-[#717171] text-[14px] leading-[16.7px] tracking-wider">
+          <p className="mb-[11px] text-[#717171] text-[11px] leading-[16.7px] tracking-wider">
             We have been working with some Fortune 500+ clients
           </p>
 
@@ -240,61 +240,36 @@ export default function Home() {
       </section>
 
       {/* Community Management Section */}
-      <section className="bg-white py-20">
-        <div className="mx-auto px-6 max-w-7xl text-center">
-          <h2 className="mb-6 font-bold text-gray-900 text-2xl md:text-4xl">
+      <section className="flex flex-row justify-center items-center bg-white mx-auto mt-[28px] px-[100px] w-[1000px] h-[291px]">
+        <div className="mx-auto w-[800px] text-center">
+          <h2 className="font-semibold text-[#4D4D4D] text-[25px]">
             Manage your entire community
             <span className="block">in a single system</span>
           </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-gray-500 text-base md:text-lg">
+          <p className="mb-[11px] text-[#717171] text-[11px] leading-[16.7px] tracking-wider">
             Who is Nextcent suitable for?
           </p>
 
-          <div className="gap-12 grid md:grid-cols-3">
+          <div className="flex flex-row justify-between items-center mt-[10px]">
             {/* Membership Organizations */}
-            <div className="group shadow-sm p-8 rounded-lg text-center">
-              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <Users className="w-10 h-10 text-mini-600" />
+            {Array.from({ length: 3 }).map((_, index) => (
+              <div
+                key={index}
+                className="group shadow-sm px-[22px] py-[17px] rounded-lg w-[208px] h-[182px] text-center"
+              >
+                <div className="flex justify-center items-center mx-auto mb-[11px] rounded-full transition-colors">
+                  <Users className="w-[45px] h-[40px]" />
+                </div>
+                <h3 className="flex flex-col justify-center items-center mb-[6px] font-bold text-[19px] text-gray-900">
+                  <span>Membership</span>
+                  <span>Organisations</span>
+                </h3>
+                <p className="w-[174px] text-[9px] text-gray-600 leading-relaxed">
+                  Our membership management software provides full automation of
+                  membership renewals and payments
+                </p>
               </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
-                Membership
-                <span className="block text-xl md:text-2xl">Organisations</span>
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Our membership management software provides full automation of
-                membership renewals and payments
-              </p>
-            </div>
-
-            {/* National Associations */}
-            <div className="group shadow-sm p-8 rounded-lg text-center">
-              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <Building2 className="w-10 h-10 text-mini-600" />
-              </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
-                National
-                <span className="block text-xl md:text-2xl">Associations</span>
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Our membership management software provides full automation of
-                membership renewals and payments
-              </p>
-            </div>
-
-            {/* Clubs And Groups */}
-            <div className="group shadow-sm p-8 rounded-lg text-center">
-              <div className="flex justify-center items-center bg-green-100 group-hover:bg-green-200 mx-auto mb-6 rounded-full w-20 h-20 transition-colors">
-                <UserCheck className="w-10 h-10 text-mini-600" />
-              </div>
-              <h3 className="mb-4 font-bold text-gray-900 text-xl md:text-3xl">
-                Clubs And
-                <span className="block text-xl md:text-2xl">Groups</span>
-              </h3>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Our membership management software provides full automation of
-                membership renewals and payments
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

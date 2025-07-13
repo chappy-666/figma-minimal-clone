@@ -259,11 +259,11 @@ export default function Home() {
                 <div className="flex justify-center items-center mx-auto mb-[11px] rounded-full transition-colors">
                   <Users className="w-[45px] h-[40px]" />
                 </div>
-                <h3 className="flex flex-col justify-center items-center mb-[6px] font-bold text-[19px] text-gray-900">
+                <h3 className="flex flex-col justify-center items-center mb-[6px] font-bold text-[#4D4D4D] text-[19px]">
                   <span>Membership</span>
                   <span>Organisations</span>
                 </h3>
-                <p className="w-[174px] text-[9px] text-gray-600 leading-relaxed">
+                <p className="w-[174px] text-[#717171] text-[9px]">
                   Our membership management software provides full automation of
                   membership renewals and payments
                 </p>

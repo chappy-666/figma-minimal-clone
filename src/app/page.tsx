@@ -7,7 +7,6 @@ import {
   ArrowRight,
   Users,
   Building2,
-  UserCheck,
   CalendarDays,
   CreditCard,
 } from "lucide-react";

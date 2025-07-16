@@ -274,28 +274,25 @@ export default function Home() {
       </section>
 
       {/* Pixelgrade Story Section */}
-      <section className="py-20">
-        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+      <section className="flex flex-row justify-between items-center mx-auto mt-[28px] px-[100px] w-[1000px] h-[301px]">
+        <div className="flex justify-between items-center mx-auto w-[800px]">
           {/* Left Illustration */}
-          <div className="flex justify-center md:w-2/5">
-            <Image
-              src="/ui_ux_conversation.png"
-              alt="Pixelgrade Story"
-              width={260}
-              height={0}
-              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
-              style={{ height: "auto" }}
-              priority
-            />
-          </div>
+          <Image
+            src="/ui_ux_conversation.png"
+            alt="Pixelgrade Story"
+            width={260}
+            height={0}
+            className="w-[307px] h-[217px]"
+            priority
+          />
           {/* Right Text */}
-          <div className="md:w-3/5">
-            <h2 className="mb-4 font-bold text-2xl md:text-4xl tracking-wide">
+          <div className="w-[460px] h-[188px">
+            <h2 className="mb-[11px] font-bold text-[25px] tracking-wide">
               The unseen of spending three
               <br />
               years at Pixelgrade
             </h2>
-            <p className="mb-6 text-gray-600 text-sm md:text-base leading-relaxed">
+            <p className="mb-[22px] text-[#717171] text-[9px] leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis

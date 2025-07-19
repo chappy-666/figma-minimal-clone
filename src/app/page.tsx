@@ -297,6 +297,8 @@ export default function Home() {
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
               tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
             </p>
             <button className="bg-mini-500 hover:bg-mini-600 px-6 py-3 rounded-md font-semibold text-white text-sm md:text-base transition">
               Learn More
@@ -306,49 +308,51 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="flex md:flex-row flex-col justify-between items-center gap-10 md:gap-0 mx-auto px-6 max-w-7xl">
-          <div className="h-24 md:text-left text-center">
-            <p className="mb-2 text-gray-700 text-2xl md:text-4xl">
+      <section className="flex flex-row justify-between items-center bg-gray-100 mx-auto mt-[33px] py-[25px] w-full">
+        <div className="flex flex-row justify-between items-center mx-auto px-[100px] w-[1000px]">
+          <div className="w-[376px] h-[85px] text-left">
+            <div className="font-semibold text-[#4D4D4D] text-[25px]">
               Helping a local
-            </p>
-            <h2 className="mb-2 font-bold text-2xl md:text-4xl">
-              <span className="text-mini-500">business reinvent itself</span>
-            </h2>
-            <div className="text-gray-500 text-sm md:text-base">
+            </div>
+            <div className="mb-[6px] font-bold text-[25px] text-mini-500">
+              business reinvent itself
+            </div>
+            <div className="text-[#717171] text-[11px]">
               We reached here with our hard work and dedication
             </div>
           </div>
 
-          <div className="gap-8 grid grid-cols-2 w-full md:w-1/2">
-            <div className="flex flex-row items-center">
-              <Users className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
+          <div className="gap-y-[28px] grid grid-cols-2 w-[376px] h-[114px]">
+            <div className="flex flex-row items-center w-[176px]">
+              <Users className="mr-[11px] w-[33px] h-[33px] text-mini-500" />
               <div>
-                <p className="font-bold text-2xl md:text-3xl">2,245,341</p>
-                <p className="text-gray-500 text-xs md:text-sm">Members</p>
-              </div>
-            </div>
-            <div className="flex flex-row items-center">
-              <Building2 className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
-              <div>
-                <p className="font-bold text-2xl md:text-3xl">46,328</p>
-                <p className="text-gray-500 text-xs md:text-sm">Clubs</p>
-              </div>
-            </div>
-            <div className="flex flex-row items-center">
-              <CalendarDays className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
-              <div>
-                <p className="font-bold text-2xl md:text-3xl">828,867</p>
-                <p className="text-gray-500 text-xs md:text-sm">
-                  Event Bookings
+                <p className="font-bold text-[#4D4D4D] text-[19px]">
+                  2,245,341
                 </p>
+                <p className="text-[#717171] text-[11px]">Members</p>
               </div>
             </div>
-            <div className="flex flex-row items-center">
-              <CreditCard className="mr-4 w-8 md:w-10 h-8 md:h-10 text-mini-500" />
+            <div className="flex flex-row items-center w-[176px]">
+              <Building2 className="mr-[11px] w-[33px] h-[33px] text-mini-500" />
               <div>
-                <p className="font-bold text-2xl md:text-3xl">1,926,436</p>
-                <p className="text-gray-500 text-xs md:text-sm">Payments</p>
+                <p className="font-bold text-[#4D4D4D] text-[19px]">46,328</p>
+                <p className="text-[#717171] text-[11px]">Clubs</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[176px]">
+              <CalendarDays className="mr-[11px] w-[33px] h-[33px] text-mini-500" />
+              <div>
+                <p className="font-bold text-[#4D4D4D] text-[19px]">828,867</p>
+                <p className="text-[#717171] text-[11px]">Event Bookings</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center w-[176px]">
+              <CreditCard className="mr-[11px] w-[33px] h-[33px] text-mini-500" />
+              <div>
+                <p className="font-bold text-[#4D4D4D] text-[19px]">
+                  1,926,436
+                </p>
+                <p className="text-[#717171] text-[11px]">Payments</p>
               </div>
             </div>
           </div>

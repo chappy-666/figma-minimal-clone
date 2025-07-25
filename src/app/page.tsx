@@ -360,7 +360,7 @@ export default function Home() {
       </section>
 
       {/* Tutorial Section */}
-      <section className="py-20">
+      <section className="flex flex-row justify-between items-center mx-auto mt-[33px] py-[25px] w-full">
         <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
           <div className="flex justify-center md:w-2/5">
             <Image
@@ -368,29 +368,25 @@ export default function Home() {
               alt="Pixelgrade Story"
               width={260}
               height={0}
-              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
+              className="w-[307px] h-[301px]"
               style={{ height: "auto" }}
               priority
             />
           </div>
-          <div className="md:w-3/5">
-            <h2 className="mb-4 font-bold text-2xl md:text-4xl tracking-wide">
-              How to design your site footer like
-              <br className="hidden md:block" /> we did
+          <div className="w-[418px]">
+            <h2 className="mb-[11px] font-semibold text-[#4D4D4D] text-[25px] tracking-wide">
+              How to design your site footer like we did
             </h2>
-            <p className="mb-6 text-gray-600 text-sm md:text-base leading-relaxed">
-              Donec a eros justo. Fusce egestas tristique ultrices. Nam
-              tempor,augue nec tincidunt <br className="hidden md:block" />
-              molestie, massa nunc varius arcu, at scelerisque elit erat a
-              magna. Donec quis erat at <br className="hidden md:block" />
-              libero ultrices mollis. In hac habitasse platea dictumst. Vivamus
-              vehicula leo dui, at porta <br className="hidden md:block" />
-              nisi facilisis finibus. In euismod augue vitae nisi ultricies, non
-              aliquet urna tincidunt. Integer <br className="hidden md:block" />
-              in nisi eget nulla commodo faucibus efficitur quis massa. Praesent
-              felis est, finibus et nisi <br className="hidden md:block" />
-              ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum
-              id gravida.
+            <p className="mb-[22px] w-[418px] text-[#717171] text-[9px] leading-relaxed">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt <br /> molestie, massa nunc varius arcu, at
+              scelerisque elit erat a magna. Donec quis erat at <br /> libero
+              ultrices mollis. In hac habitasse platea dictumst. Vivamus
+              vehicula leo dui, at porta <br /> nisi facilisis finibus. In
+              euismod augue vitae nisi ultricies, non aliquet urna tincidunt.
+              Integer <br /> in nisi eget nulla commodo faucibus efficitur quis
+              massa. Praesent felis est, finibus et nisi <br /> ac, hendrerit
+              venenatis libero. Donec consectetur faucibus ipsum id gravida.
             </p>
             <button className="bg-mini-500 hover:bg-mini-600 px-6 py-3 rounded-md font-semibold text-white transition">
               Learn More

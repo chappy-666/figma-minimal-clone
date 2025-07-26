@@ -361,7 +361,7 @@ export default function Home() {
 
       {/* Tutorial Section */}
       <section className="flex flex-row justify-between items-center mx-auto mt-[33px] py-[25px] w-full">
-        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+        <div className="flex flex-row justify-between items-center mx-auto px-[100px] w-[1000px]">
           <div className="flex justify-center md:w-2/5">
             <Image
               src="/secure_login_style.png"
@@ -396,21 +396,21 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="flex md:flex-row flex-col items-center md:items-start gap-12 mx-auto px-6 max-w-7xl">
+      <section className="flex flex-row justify-between items-center mx-auto mt-[33px] py-[25px] w-full">
+        <div className="flex flex-row justify-between items-center mx-auto px-[100px] w-[1000px]">
           <div className="flex justify-center items-center mb-8 w-1/3">
             <Image
               src="/futuristic.png"
               alt="Pixelgrade Story"
               width={260}
               height={0}
-              className="w-[200px] md:w-[240px] lg:w-[260px] h-auto"
+              className="w-[226px] h-[226px]"
               style={{ height: "auto" }}
               priority
             />
           </div>
-          <div className="w-2/3">
-            <p className="mb-[11.14px] text-gray-700 italic">
+          <div className="w-[520px]">
+            <p className="mb-[11.14px] text-[#717171] text-[9px]">
               Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
               lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
               enim metus. Vivamus sed libero ornare, tristique quam in, gravida
@@ -423,14 +423,14 @@ export default function Home() {
               condimentum id. Curabitur id nibh id sem dignissim finibus ac sit
               amet magna.
             </p>
-            <div className="mb-2 font-bold text-mini-500 text-xl">
+            <div className="mb-2 font-bold text-[14px] text-mini-500 text-xl">
               Tim Smith
             </div>
-            <p className="text-gray-500 text-sm">
+            <p className="text-[#717171] text-[11px]">
               British Dragon Boat Racing Association
             </p>
             {/* Client logos again */}
-            <div className="flex flex-wrap justify-center gap-6 mt-8">
+            <div className="flex flex-wrap justify-between gap-6 mt-8">
               {clientLogos.map((client, i) => (
                 <div key={i} className="text-2xl">
                   {client.icon}

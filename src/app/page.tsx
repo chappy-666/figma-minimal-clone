@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="flex flex-row justify-between items-center bg-gray-100 mx-auto mt-[33px] py-[25px] w-full">
+      <section className="flex flex-row justify-between items-center bg-gray-100 mx-auto mt-[33px] py-[25px] w-full h-[202px]">
         <div className="flex flex-row justify-between items-center mx-auto px-[100px] w-[1000px]">
           <div className="w-[376px] h-[85px] text-left">
             <div className="font-semibold text-[#4D4D4D] text-[25px]">
@@ -442,35 +442,32 @@ export default function Home() {
       </section>
 
       {/* Caring */}
-      <section className="py-20">
-        <div className="flex flex-col items-center mx-auto px-6 max-w-7xl">
-          <h2 className="py-4 font-bold text-2xl md:text-4xl tracking-wide">
+      <section className="flex flex-row justify-between items-center mx-auto mt-[33px] w-full">
+        <div className="flex flex-col justify-between items-center mx-auto w-[1000px]">
+          <h2 className="mx-auto mb-[6px] w-[772px] font-semibold text-[#4D4D4D] text-[25px] text-center tracking-wide">
             Caring is the new marketing
           </h2>
-          <div className="text-gray-500">
+          <div className="mb-[11px] w-[437px] text-[#717171] text-[11px] text-center">
             The Nextcent blog is the best place to read about the latest
-            membership insights,
-            <br /> trends and more. See who&apos;s joining the community, <br />
-            read about how our community are increasing their membership income
-            and lot&apos;s more .
+            membership insights, <br /> trends and more. See who&apos;s joining
+            the community, read about how our community <br /> are increasing
+            their membership income and lot&apos;s more .
           </div>
-          <div className="gap-6 grid md:grid-cols-3">
+          <div className="grid grid-cols-3">
             {/* Membership Organizations */}
             <div className="flex flex-col justify-center items-center">
               <Image
                 src="/secure_login_style.png"
                 alt="Pixelgrade Story"
-                width={350}
-                height={0}
-                className="w-[380px] h-auto"
+                width={256}
+                height={256}
+                className="w-[256px] h-auto"
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md py-4 rounded-xl w-2/3">
-                <div className="mb-4 w-full text-neutral-grey text-lg text-center">
-                  Creating Streamlined <br />
-                  Safeguarding Processes with <br />
-                  OneRen
+              <div className="-top-[67px] relative flex flex-col justify-center bg-netural-silver shadow-md p-[11px] py-4 rounded-xl w-[220px]">
+                <div className="mb-[11px] w-[198px] font-semibold text-[#4D4D4D] text-[14px] text-center">
+                  Creating Streamlined Safeguarding Processes with OneRen
                 </div>
                 <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
                   Register Now
@@ -484,16 +481,16 @@ export default function Home() {
               <Image
                 src="/secure_login_style.png"
                 alt="Pixelgrade Story"
-                width={350}
-                height={0}
-                className="w-[380px] h-auto"
+                width={256}
+                height={256}
+                className="w-[256px] h-auto"
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md py-4 rounded-xl w-2/3">
-                <div className="mb-4 w-full text-neutral-grey text-lg text-center">
-                  What are your safeguarding <br /> responsibilities and how can{" "}
-                  <br /> you manage them?
+              <div className="-top-[67px] relative flex flex-col justify-center bg-netural-silver shadow-md p-[11px] py-4 rounded-xl w-[220px]">
+                <div className="mb-[11px] w-[198px] font-semibold text-[#4D4D4D] text-[14px] text-center">
+                  What are your safeguarding responsibilities and how can you
+                  manage them?
                 </div>
                 <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
                   Register Now
@@ -507,16 +504,15 @@ export default function Home() {
               <Image
                 src="/secure_login_style.png"
                 alt="Pixelgrade Story"
-                width={350}
-                height={0}
-                className="w-[380px] h-auto"
+                width={256}
+                height={256}
+                className="w-[256px] h-auto"
                 style={{ height: "auto" }}
                 priority
               />
-              <div className="-top-20 relative flex flex-col justify-center bg-netural-silver shadow-md px-2 py-4 rounded-xl w-2/3">
-                <div className="mb-4 w-full font-medium text-neutral-grey text-lg text-center">
-                  Revamping the Membership <br /> Model with Triathlon <br />{" "}
-                  Australia
+              <div className="-top-[67px] relative flex flex-col justify-center bg-netural-silver shadow-md p-[11px] py-4 rounded-xl w-[220px]">
+                <div className="mb-[11px] w-[198px] font-semibold text-[#4D4D4D] text-[14px] text-center">
+                  Revamping the Membership Model with Triathlon Australia
                 </div>
                 <button className="flex items-center mx-auto rounded-md font-bold text-mini-500 text-center transition-colors">
                   Register Now
